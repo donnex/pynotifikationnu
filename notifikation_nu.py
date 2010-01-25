@@ -10,13 +10,6 @@ class NotifikationNuApiError(Exception):
 class NotifikationNu(object):
     """A library that provides a python interface to the
     Notifikation.nu API
-
-    Example:
-        notifikation_nu = NotifikationNu('API_KEY_FROM_NOTIFIKATION.NU')
-        notifikation_nu.send_notification(ID, 'Notification message...')
-
-    Both api key and notification id can be found on your account page on
-    http://notifikation.nu
     """
 
     def __init__(self, api_key):
