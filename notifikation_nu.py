@@ -10,7 +10,7 @@ class NotifikationNu(object):
 
     Example:
         notifikation_nu = NotifikationNu('API_KEY_FROM_NOTIFIKATION.NU')
-        notifikation_nu.send(ID, 'Notification message...')
+        notifikation_nu.send_notification(ID, 'Notification message...')
 
     Both api key and notification id can be found on your account page on
     http://notifikation.nu
@@ -21,7 +21,7 @@ class NotifikationNu(object):
         if len(self.api_key) != 40:
             raise ValueError('API key must be 40 characters.')
 
-    def send(self, notification_id, message):
+    def send_notification(self, notification_id, message):
         """Send a notification to the notification_id with message as
         notification content.
         """
