@@ -1,5 +1,8 @@
 import urllib
-import json
+try:
+    import json
+except ImportError:
+    import simplejson as json
 
 class NotifikationNuApiError(Exception):
     pass
