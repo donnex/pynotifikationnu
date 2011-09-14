@@ -17,7 +17,7 @@ class NotifikationNu(object):
         if len(self.api_key) != 40:
             raise ValueError('API key must be 40 characters.')
 
-    def send_notification(self, notification_id, message, category='', event=''):
+    def send_notification(self, notification_id, message, category=None, event=None):
         """Send a notification to the notification_id with message as
         notification content. Category and event will override the
         values set on notifikation.nu.
@@ -26,9 +26,11 @@ class NotifikationNu(object):
         self.post_data = {
             'id': notification_id,
             'message': message,
-            'category': category,
-            'event': event,
         }
+        if category:
+            self.post_data['category'] = category
+        if event:
+            self.post_data['event'] = event
 
         params = urllib.urlencode(self.post_data)
         self.api_reply_content = urllib.urlopen(self.api_url, params).read()
