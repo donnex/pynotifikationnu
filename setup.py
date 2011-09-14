@@ -1,7 +1,7 @@
 from distutils.core import setup
 
 setup(
-    name='NotifikationNu',
+    name='notifikation_nu',
     version='1.0',
     description='API library for interacting with Notifikation.nu.',
     url='https://github.com/donnex/pynotifikationnu',
