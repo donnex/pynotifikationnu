@@ -15,7 +15,9 @@ message2 = 'Test notification 2'
 notifikation_nu = NotifikationNu(api_key)
 try:
     notifikation_nu.send_notification(notification_id, message)
-    notifikation_nu.send_notification(notification_id, message2)
+    notifikation_nu.send_notification(notification_id, message2,
+                                      category='Test category',
+                                      event='Test event')
     print 'Successfully sent two notifications'
 except Exception, e:
     print e
